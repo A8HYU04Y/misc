@@ -7,7 +7,10 @@ public class CSVReader{
         public void maxScore(File file)throws IOException{
             
             PrintStream print = new PrintStream(System.out);
-            Scanner scan= new Scanner(file);
+            
+            try{
+            Scanner scan= new Scanner(file);}
+            catch(FileNotFoundEcxeption){ System.out.println("File Not Found !!!! ");           }
         ArrayList<String> contents=new ArrayList<String>();
         int index=0;
 
