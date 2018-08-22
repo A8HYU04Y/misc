@@ -118,6 +118,6 @@ public class Main  {
 
                       break;                        
      }
-           
+           scn.close();
     }
 }
