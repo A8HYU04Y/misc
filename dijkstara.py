@@ -82,7 +82,7 @@ if __name__ == '__main__':
 	g=Graph()
 	t1=time.time()
 
-	g.add_edge(["A","B",2],["A","D",8],["A","C",4],["B","C",3], ## Kennetth H. Rosen Discrete Mathematics 7ed 8.6 QUE. 4
+	g.add_edge(["A","B",2],["A","D",8],["A","C",4],["B","C",3], ## Kenneth H. Rosen Discrete Mathematics 7ed 8.6 QUE. 4
 		       ["C","F",2],["C","E",2],["B","E",1],["D","F",5],
 		       ["D","G",4],["G","F",3],["E","H",3],["F","H",3],
 		       ["F","I",2],["F","J",4],["G","K",2],["H","L",1],
