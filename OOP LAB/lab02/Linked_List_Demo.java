@@ -40,7 +40,7 @@ public class Linked_List_Demo{
                  break;
         case 2: System.out.println("Enter ISBN : ");
                 
-                 sc.nextLine();
+                 sc.nextLine(); // clearing Scanner Buffer
                    String is=sc.nextLine();
                 for(Book x: Book_List){
                     if(x.ISBN.equalsIgnoreCase(is)){
@@ -52,7 +52,7 @@ public class Linked_List_Demo{
                 break;
 
         case 3: System.out.print("Enter Title : ");
-                 sc.nextLine();        
+                 sc.nextLine();      // clearing Scanner Buffer  
                  String titl = sc.nextLine();
                 for(Book x : Book_List){
                     if(x.title.equalsIgnoreCase(titl)){
