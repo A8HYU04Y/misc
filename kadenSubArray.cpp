@@ -1,3 +1,8 @@
+/* since we want to find a subarray with maximum sum, the
+subarray that ends at position (k-1) should also have the maximum sum. Thus,
+we can solve the problem efficiently by calculating the maximum subarray sum
+for each ending position from left to right.   */
+
 #include<iostream>
 using namespace std;
 
