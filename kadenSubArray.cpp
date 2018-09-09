@@ -11,7 +11,7 @@ int main()
   for(int i=0;i<size;i++)
   	cin>>a[i];
   for(int j=0;j<size;j++)
-  {
+  {  // checking current level sum 
   	sum=max(a[j],sum+a[j]);//maximum from current element and previous sum+current element 
   	best=max(best,sum);//maximum between previous max and current max
   }
