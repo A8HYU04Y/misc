@@ -22,15 +22,14 @@ class Main{
 			int n = in.nextInt();
 			coord maxC=null;
 			int maxi=-1;
-			ArrayList<coord> c=new ArrayList<>();
+			
 			while(n-->0){
 				int r=in.nextInt();
 				int col= in.nextInt();
-				//c.add(new coord(r,col));
 				int p = in.nextInt();
 				a[r][col]=p;
-			for(int j= r-d;j<=r+d && j>=0 && j<1024;j++ ){
-					for(int k= col-d;k<=col+d && k>=0 && k<1024;k++ ){
+			for(int j= r-d;j<=r+d && j>=0 && j<1025;j++ ){
+					for(int k= col-d;k<=col+d && k>=0 && k<1025;k++ ){
 						killed[j][k]+=a[r][col];
 					    if(killed[j][k]>maxi){
 					    	maxi =killed[j][k];
