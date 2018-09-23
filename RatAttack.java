@@ -1,9 +1,9 @@
 import java.util.*;
-class coord
+class box
 {
     int x;
     int y;
-    coord(int x,int y){
+    box(int x,int y){
     	this.x=x;
     	this.y=y;
     }
@@ -17,10 +17,10 @@ class Main{
 		int t=in.nextInt();
 		while(t-->0){
 			int[][] a=new int[1025][1025];
-		int[][] killed =new int[10256][1025];
+		int[][] killed =new int[1025][1025];
 			int d= in.nextInt();
 			int n = in.nextInt();
-			coord maxC=null;
+			box maxC=null;
 			int maxi=-1;
 			
 			while(n-->0){
@@ -33,11 +33,11 @@ class Main{
 						killed[j][k]+=a[r][col];
 					    if(killed[j][k]>maxi){
 					    	maxi =killed[j][k];
-					    	maxC=new coord(j,k);
+					    	maxC=new box(j,k);
 					    }
 					    else if(killed[j][k]==maxi){
 					    	if(j<maxC.x && k<maxC.y){
-					    		maxC=new coord(j,k);
+					    		maxC=new box(j,k);
 					    		maxi=killed[j][k];
 					    	}
 					    }}
