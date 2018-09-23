@@ -17,7 +17,7 @@ class RatAttack{
 		int t=in.nextInt();
 		while(t-->0){
 			int[][] a=new int[1025][1025];
-		int[][] killed =new int[10256][1025];
+		int[][] killed =new int[1025][1025];
 			int d= in.nextInt();
 			int n = in.nextInt();
 			coord maxC=null;
