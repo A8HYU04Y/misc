@@ -2,8 +2,7 @@
 #include<vector>
 using namespace std;
 
-int killed[1025][1025];
-int a[1025][1025];
+
 class coord{
 	public:
     int x;
@@ -20,18 +19,15 @@ int main()
 {   
 	int t;
     
-    cin>>t;
+    scanf("%d",&t);
     while(t--){
         int n,d,maxi=-1;
         vector<vector<int> > killed( 1025 , vector<int>(1025,0));
         vector<vector<int> > a( 1025 , vector<int>(1025,0));
-
-        coord maxC(-1,-1);
-        cin>>d;
-        cin>>n;
-        
-        
-        while(n--){
+	coord maxC(-1,-1);
+        scanf("%d",&d);
+        scanf("%d",&n);
+          while(n--){
             int x,y,p;
             cin>>x>>y>>p;
             a[x][y]=p;
@@ -50,18 +46,11 @@ int main()
                  maxC.y=j;
             }
         }
-
-
-  }
+}
 
         }}
         
-       cout<<maxC.x<<" "<<maxC.y<<" "<<maxi<<endl; 
-     
-
-
-
-
-    }
+       printf("%d %d %d\n",maxC.x,maxC.y,maxi); 
+     }
     return 0;
 }
