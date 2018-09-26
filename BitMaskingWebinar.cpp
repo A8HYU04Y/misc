@@ -22,7 +22,7 @@ int CountSetBits2(int n){
 // say a=5, b=6 
 void XORSwapping(int a,int b){
 	a=a^b; // 1. a=a^b => a=5^6 
-	b=b^a; //2. b=b^a => b=6^5^5=5 
+	b=b^a; //2. b=b^a => b=6^5^6=5 
 	a=a^b; //3. a=a^b =>5^6^5 => a=6
 }
 // checking ith Bit
