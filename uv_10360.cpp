@@ -1,8 +1,6 @@
 #include<iostream>
 #include<vector>
 using namespace std;
-
-
 class coord{
 	public:
     int x;
@@ -11,14 +9,10 @@ class coord{
 	 coord(int X,int Y){
 		x=X;
 		y=Y;
-	}
-	
-};
+	}};
 
 int main()
-{   
-	int t;
-    
+{   int t;
     scanf("%d",&t);
     while(t--){
         int n,d,maxi=-1;
@@ -47,10 +41,8 @@ int main()
             }
         }
 }
-
-        }}
-        
-       printf("%d %d %d\n",maxC.x,maxC.y,maxi); 
+}}
+  printf("%d %d %d\n",maxC.x,maxC.y,maxi); 
      }
     return 0;
 }
