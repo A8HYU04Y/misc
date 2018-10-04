@@ -18,3 +18,7 @@ prog.key('C-c',(ch,key)=>{
 	prog.clear();
 	return process.exit(0);
 });
+prog.key('q',(ch.key)=>{
+	prog.clear();
+	return process.exit(0)
+;});
