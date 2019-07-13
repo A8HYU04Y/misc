@@ -19,17 +19,17 @@ rchild++ ;
 if(dfs_num[x]==0){
         dfs_par[x]=u ;
         
-        arti(x) ;
-       if(dfs_low[x]>=dfs_num[u])
+        arti(x) ; // let it settle its dfs_low or upmost reach first
+       if(dfs_low[x]>=dfs_num[u]) // if its reach is below or at current node
        artic[u]=1 ;
-       if(dfs_low[x]>dfs_num[u])
+       if(dfs_low[x]>dfs_num[u]) // itf its reach is below current node's reach i.e. Bridge
           printf("Bridge : %d %d\n",x,u);       
-dfs_low[u] = min(dfs_low[u],dfs_low[x]) ;
+dfs_low[u] = min(dfs_low[u],dfs_low[x]) ;  // current nodes reach will update to childs reach
 
 
     }
-    else if(x!=dfs_par[u])
-    dfs_low[u] = min(dfs_low[u],dfs_num[x]) ;
+    else if(x!=dfs_par[u]) // back edge detected 
+    dfs_low[u] = min(dfs_low[u],dfs_num[x]) ; // updated reach
 }
 
 }
@@ -52,7 +52,7 @@ int main(){
 root=i; rchild=0;        
 arti(i) ;
  }
-artic[root] = rchild>1 ;
+artic[root] = rchild>1 ; // root with children<=1 cant be articulation point
 for(int i=0 ; i<v ; i++)
   
   printf("%d ",artic[i]) ;
