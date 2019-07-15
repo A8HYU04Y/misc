@@ -14,10 +14,11 @@ void arti(int u){
 dfs_low[u]=dfs_num[u]=++t ;
 for(int i=0;i<(int)adj[u].size();i++){
     int x=adj[u][i];
-if (root==u)
-rchild++ ;    
+
 if(dfs_num[x]==0){
-        dfs_par[x]=u ;
+  if (root==u)
+      rchild++ ;          
+  dfs_par[x]=u ;
         
         arti(x) ; // let it settle its dfs_low or upmost reach first
        if(dfs_low[x]>=dfs_num[u]) // if its reach is below or at current node
