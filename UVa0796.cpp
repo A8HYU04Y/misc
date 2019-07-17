@@ -26,18 +26,9 @@ void artic(int u){
     }
 }
 
-
-
-
-
-
-
-
-
-
-
 int main()
-{ freopen("file.txt","w",stdout) ;
+{ 
+   freopen("file.txt","w",stdout) ;
    int n ;
     
     while(scanf("%d", &n) == 1){
